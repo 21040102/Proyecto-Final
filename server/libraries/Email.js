@@ -14,8 +14,8 @@ class Email{
         this.transport = nodemailer.createTransport({
             service: "gmail",
             auth:{
-                user:"examplenodemailer2022@gmail.com",
-                pass:"ddrbiyxfsxhjrxwp"
+                user:"utm21040102@utma.edu.mx",
+                pass:"vztfgddksmjeonbq"
             }
         });
     }
@@ -23,15 +23,17 @@ class Email{
     sendEmail(email,data){
 
         return new Promise((resolve,rejects) =>{
-            const template = fs.readFileSync(path.resolve(__dirname, "../assets/template/template.html"), "utf-8");
+            const template = fs.readFileSync(path.resolve(__dirname, "../assets/template/index.html"), "utf-8");
             const compileTemplate =hogan.compile(template);
+
+            console.log(data);
 
 
             this.transport.sendMail({
-                from: '"UTMA" <examplenodemailer2022@gmail.com>',
+                from: '"Proyecto" <utm21040102@utma.edu.mx>',
                 to: email,
-                subject:"correo electronico de prueba",
-                html: compileTemplate.render(),
+                subject:"correo electronico personal",
+                html: compileTemplate.render({strNombre: data.strNombre, strPrimerApellido: data.strPrimerApellido, strSegundoApellido: data.strSegundoApellido, nmbEdad: data.nmbEdad}),
             }).then((response) => {
                 resolve(response)
             })
