@@ -1,5 +1,5 @@
 const express = require("express");
-const puestomodels = require("../models/puesto.models");
+const puestomodels = require("../models/puesto.Models");
 const router = express.Router()
 
 
