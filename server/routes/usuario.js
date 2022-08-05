@@ -91,7 +91,9 @@ router.post("/enviarEmail", (req, res) => {
 });
 
 router.post("/", (request, response) => {
-    const usuario = new Usuariomodel(req.body);
+    const usuario = new usuarioModel(request.body);
+
+    console.log(usuario);
     usuario.save()
     .then((UsuarioRegistrado) => {
        return response.status(200).json({

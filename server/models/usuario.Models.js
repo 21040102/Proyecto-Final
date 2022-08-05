@@ -6,7 +6,7 @@ const UsuarioSchema = mongoose.Schema({
         type: String,
         required: [true,"Es necesario ingresar el Nombre"]
     },
-    strPrimerApellidos :{
+    strPrimerApellido :{
         type: String,
         required: [true,"Es necesario ingresar los apellidos"]
     },
