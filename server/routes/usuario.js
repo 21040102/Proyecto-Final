@@ -25,7 +25,7 @@ router.get("/:id", (request, response) => {
 router.get("/", (request, response) => {
    
    
-    const registro =  usuariomodel.find().exec()
+    const registro =  usuarioModel.find().exec()
    .then((registro) => {
        return response.status(200).json({
            msg:"Se consulto la tabla usuario exitosamente",
