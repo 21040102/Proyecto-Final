@@ -1,35 +1,33 @@
-const mongoose = require("mongoose");
-const mongooseHidden = require("mongoose-hidden")();
+const mongoose= require("mongoose");
+const parseId= (id) => {return mongoose.Types.ObjectId(id)}
 
 const UsuarioSchema = mongoose.Schema({
-    nombre:{
-        type:String,
-        required: [true, "Es necesario ingresar tu Nombre"]
+    strNombre : {
+        type: String,
+        required: [true,"Es necesario ingresar el Nombre"]
     },
-    PrimerApellido:{
-        type:String,
-        required: [true, "Es necesario ingresar tu Primer Apellido"]
+    strPrimerApellidos :{
+        type: String,
+        required: [true,"Es necesario ingresar los apellidos"]
     },
-    SegundoApellido:{
-        type:String,
-        required: [true, "Es necesario ingresar tu Segundo Apellido"]
+    strSegundoApellido:{
+        type: String,
+        required: [true,"Es necesario ingresar el Segundo Apellido"]
+    },
+    nmbEdad :Number,
+
+    idPuesto:{
+        type: mongoose.Types.ObjectId, 
+        required:[true, "descripcion"]
     },
 
-    correoElectronico:{
-        type:String,
-        required: [true, "Es necesario ingresar tu correo"]
-    },
+    credenciales: 
+        {
+            strCorreo : {type: String, required : true , unique: false },
+            strPassword : {type: String, required : true, unique: false}
+        }
+    
 
-    password:{
-        type:String,
-        required: [true, "Es necesario ingresar tu contraseña"]
-    },
-
-
-    edad: Number,    
 })
-
-
-UsuarioSchema.plugin(mongooseHidden, {hidden:{password:true, _id:false}});
 
 module.exports = mongoose.model("usuario", UsuarioSchema);

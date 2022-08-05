@@ -1,857 +1,222 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta name="__cloudhq_email_draft_json" content="eyJjb3VudGVycyI6eyJ1X3JvdyI6NiwidV9jb2x1bW4iOjYsInVfY29udGVudF90ZXh0Ijo4LCJ1X2NvbnRlbnRfaW1hZ2UiOjIsInVfY29udGVudF9idXR0b24iOjEsInVfY29udGVudF9zb2NpYWwiOjEsInVfY29udGVudF92aWRlbyI6Mn0sImJvZHkiOnsiaWQiOiJ5WkE5STNxRGZpIiwicm93cyI6W3siaWQiOiJVZW4tajJOVFU1IiwiY2VsbHMiOlsxXSwiY29sdW1ucyI6W3siaWQiOiIwSGJhbnZveW5FIiwiY29udGVudHMiOlt7ImlkIjoidzhWSHN0cWxaTiIsInR5cGUiOiJpbWFnZSIsInZhbHVlcyI6eyJjb250YWluZXJQYWRkaW5nIjoiMHB4IiwiYW5jaG9yIjoiIiwic3JjIjp7InVybCI6Imh0dHBzOi8vd3d3LmtpbGxwaW5nLmNvbS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDE1LzA1L2Vra28uanBnIiwid2lkdGgiOjE5MjAsImhlaWdodCI6MTA4MCwibWF4V2lkdGgiOiIxMDAlIiwiYXV0b1dpZHRoIjp0cnVlfSwidGV4dEFsaWduIjoiY2VudGVyIiwiYWx0VGV4dCI6IkltYWdlIiwiYWN0aW9uIjp7Im5hbWUiOiJ3ZWIiLCJ2YWx1ZXMiOnsiaHJlZiI6IiIsInRhcmdldCI6Il9ibGFuayJ9fSwiaGlkZURlc2t0b3AiOmZhbHNlLCJkaXNwbGF5Q29uZGl0aW9uIjpudWxsLCJfbWV0YSI6eyJodG1sSUQiOiJ1X2NvbnRlbnRfaW1hZ2VfMSIsImh0bWxDbGFzc05hbWVzIjoidV9jb250ZW50X2ltYWdlIn0sInNlbGVjdGFibGUiOnRydWUsImRyYWdnYWJsZSI6dHJ1ZSwiZHVwbGljYXRhYmxlIjp0cnVlLCJkZWxldGFibGUiOnRydWUsImhpZGVhYmxlIjp0cnVlLCJoaWRlTW9iaWxlIjpmYWxzZX19XSwidmFsdWVzIjp7Il9tZXRhIjp7Imh0bWxJRCI6InVfY29sdW1uXzIiLCJodG1sQ2xhc3NOYW1lcyI6InVfY29sdW1uIn0sImJvcmRlciI6e30sInBhZGRpbmciOiIwcHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIifX1dLCJ2YWx1ZXMiOnsiZGlzcGxheUNvbmRpdGlvbiI6bnVsbCwiY29sdW1ucyI6ZmFsc2UsImJhY2tncm91bmRDb2xvciI6IiIsImNvbHVtbnNCYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIiwiYmFja2dyb3VuZEltYWdlIjp7InVybCI6IiIsImZ1bGxXaWR0aCI6dHJ1ZSwicmVwZWF0IjpmYWxzZSwiY2VudGVyIjp0cnVlLCJjb3ZlciI6ZmFsc2V9LCJwYWRkaW5nIjoiMHB4IiwiYW5jaG9yIjoiIiwiaGlkZURlc2t0b3AiOmZhbHNlLCJfbWV0YSI6eyJodG1sSUQiOiJ1X3Jvd18yIiwiaHRtbENsYXNzTmFtZXMiOiJ1X3JvdyJ9LCJzZWxlY3RhYmxlIjp0cnVlLCJkcmFnZ2FibGUiOnRydWUsImR1cGxpY2F0YWJsZSI6dHJ1ZSwiZGVsZXRhYmxlIjp0cnVlLCJoaWRlYWJsZSI6dHJ1ZSwiaGlkZU1vYmlsZSI6ZmFsc2UsIm5vU3RhY2tNb2JpbGUiOmZhbHNlfX0seyJpZCI6Ik9kb3pjdGxRQjciLCJjZWxscyI6WzFdLCJjb2x1bW5zIjpbeyJpZCI6Ilc4UHREU3h3TkQiLCJjb250ZW50cyI6W3siaWQiOiJwcDZiUXEyM3ZtIiwidHlwZSI6InRleHQiLCJ2YWx1ZXMiOnsiY29udGFpbmVyUGFkZGluZyI6IjEwcHggMTBweCAzM3B4IDdweCIsImFuY2hvciI6IiIsInRleHRBbGlnbiI6ImNlbnRlciIsImxpbmVIZWlnaHQiOiIxNjAlIiwibGlua1N0eWxlIjp7ImluaGVyaXQiOnRydWUsImxpbmtDb2xvciI6IiMwMDAwZWUiLCJsaW5rSG92ZXJDb2xvciI6IiMwMDAwZWUiLCJsaW5rVW5kZXJsaW5lIjp0cnVlLCJsaW5rSG92ZXJVbmRlcmxpbmUiOnRydWV9LCJoaWRlRGVza3RvcCI6ZmFsc2UsImRpc3BsYXlDb25kaXRpb24iOm51bGwsIl9tZXRhIjp7Imh0bWxJRCI6InVfY29udGVudF90ZXh0XzYiLCJodG1sQ2xhc3NOYW1lcyI6InVfY29udGVudF90ZXh0In0sInNlbGVjdGFibGUiOnRydWUsImRyYWdnYWJsZSI6dHJ1ZSwiZHVwbGljYXRhYmxlIjp0cnVlLCJkZWxldGFibGUiOnRydWUsImhpZGVhYmxlIjp0cnVlLCJoaWRlTW9iaWxlIjpmYWxzZSwidGV4dCI6IjxwIHN0eWxlPVwiZm9udC1zaXplOiAxNHB4OyBsaW5lLWhlaWdodDogMTYwJTsgdGV4dC1hbGlnbjogbGVmdDtcIj7CoDwvcD5cbjxwIHN0eWxlPVwibGluZS1oZWlnaHQ6IDE2MCU7IHRleHQtYWxpZ246IGNlbnRlcjsgZm9udC1zaXplOiAxNHB4O1wiPjxzcGFuIHN0eWxlPVwiYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsgZm9udC1zaXplOiAyMnB4OyBsaW5lLWhlaWdodDogMzUuMnB4OyBjb2xvcjogIzIzNmZhMTsgZm9udC1mYW1pbHk6ICdQbGF5ZmFpciBEaXNwbGF5Jywgc2VyaWY7XCI+QmllbnZlbmlkbyBhIGxhIGdyaWV0YSBkZWwgaW52b2NhZG9ywqA8L3NwYW4+PC9wPiJ9fSx7ImlkIjoieFBWVkhVTGRBNCIsInR5cGUiOiJ2aWRlbyIsInZhbHVlcyI6eyJjb250YWluZXJQYWRkaW5nIjoiMTBweCIsImFuY2hvciI6IiIsInZpZGVvIjp7InVybCI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9a21OdWk2a0MxTGsiLCJ0aHVtYm5haWwiOiJodHRwczovL2Fzc2V0cy51bmxheWVyLmNvbS9wcm9qZWN0cy84MzQ1LzE2NTk3MzAxMzkyOTgtdmlkZW9feW91dHViZV9rbU51aTZrQzFMay5qcGciLCJ2aWRlb0lkIjoia21OdWk2a0MxTGsiLCJ0eXBlIjoieW91dHViZSJ9LCJkaXNwbGF5Q29uZGl0aW9uIjpudWxsLCJfbWV0YSI6eyJodG1sSUQiOiJ1X2NvbnRlbnRfdmlkZW9fMiIsImh0bWxDbGFzc05hbWVzIjoidV9jb250ZW50X3ZpZGVvIn0sInNlbGVjdGFibGUiOnRydWUsImRyYWdnYWJsZSI6dHJ1ZSwiZHVwbGljYXRhYmxlIjp0cnVlLCJkZWxldGFibGUiOnRydWUsImhpZGVhYmxlIjp0cnVlfX0seyJpZCI6IkJKUi1SS1h1X2MiLCJ0eXBlIjoidGV4dCIsInZhbHVlcyI6eyJjb250YWluZXJQYWRkaW5nIjoiMzNweCA1NXB4IDYwcHgiLCJhbmNob3IiOiIiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJsaW5lSGVpZ2h0IjoiMTYwJSIsImxpbmtTdHlsZSI6eyJpbmhlcml0Ijp0cnVlLCJsaW5rQ29sb3IiOiIjMDAwMGVlIiwibGlua0hvdmVyQ29sb3IiOiIjMDAwMGVlIiwibGlua1VuZGVybGluZSI6dHJ1ZSwibGlua0hvdmVyVW5kZXJsaW5lIjp0cnVlfSwiaGlkZURlc2t0b3AiOmZhbHNlLCJkaXNwbGF5Q29uZGl0aW9uIjpudWxsLCJfbWV0YSI6eyJodG1sSUQiOiJ1X2NvbnRlbnRfdGV4dF83IiwiaHRtbENsYXNzTmFtZXMiOiJ1X2NvbnRlbnRfdGV4dCJ9LCJzZWxlY3RhYmxlIjp0cnVlLCJkcmFnZ2FibGUiOnRydWUsImR1cGxpY2F0YWJsZSI6dHJ1ZSwiZGVsZXRhYmxlIjp0cnVlLCJoaWRlYWJsZSI6dHJ1ZSwiaGlkZU1vYmlsZSI6ZmFsc2UsInRleHQiOiI8cCBzdHlsZT1cImxpbmUtaGVpZ2h0OiAxNjAlOyBmb250LXNpemU6IDE0cHg7XCI+PHNwYW4gc3R5bGU9XCJmb250LXNpemU6IDE4cHg7IGxpbmUtaGVpZ2h0OiAyOC44cHg7IGZvbnQtZmFtaWx5OiAnT2xkIFN0YW5kYXJkIFRUJywgc2VyaWY7XCI+SGFwcHkgYmlydGhkYXkgb2xkIGZyaWVuZCE8YnIgLz48L3NwYW4+PC9wPlxuPHAgc3R5bGU9XCJsaW5lLWhlaWdodDogMTYwJTsgZm9udC1zaXplOiAxNHB4O1wiPjxzcGFuIHN0eWxlPVwiZm9udC1zaXplOiAxOHB4OyBsaW5lLWhlaWdodDogMjguOHB4OyBmb250LWZhbWlseTogJ09sZCBTdGFuZGFyZCBUVCcsIHNlcmlmO1wiPjxiciAvPjxiciAvPjwvc3Bhbj48L3A+In19XSwidmFsdWVzIjp7Il9tZXRhIjp7Imh0bWxJRCI6InVfY29sdW1uXzQiLCJodG1sQ2xhc3NOYW1lcyI6InVfY29sdW1uIn0sImJvcmRlciI6e30sInBhZGRpbmciOiIwcHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIifX1dLCJ2YWx1ZXMiOnsiZGlzcGxheUNvbmRpdGlvbiI6bnVsbCwiY29sdW1ucyI6ZmFsc2UsImJhY2tncm91bmRDb2xvciI6IiIsImNvbHVtbnNCYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIiwiYmFja2dyb3VuZEltYWdlIjp7InVybCI6IiIsImZ1bGxXaWR0aCI6dHJ1ZSwicmVwZWF0IjpmYWxzZSwiY2VudGVyIjp0cnVlLCJjb3ZlciI6ZmFsc2V9LCJwYWRkaW5nIjoiMHB4IiwiYW5jaG9yIjoiIiwiaGlkZURlc2t0b3AiOmZhbHNlLCJfbWV0YSI6eyJodG1sSUQiOiJ1X3Jvd180IiwiaHRtbENsYXNzTmFtZXMiOiJ1X3JvdyJ9LCJzZWxlY3RhYmxlIjp0cnVlLCJkcmFnZ2FibGUiOnRydWUsImR1cGxpY2F0YWJsZSI6dHJ1ZSwiZGVsZXRhYmxlIjp0cnVlLCJoaWRlYWJsZSI6dHJ1ZSwiaGlkZU1vYmlsZSI6ZmFsc2UsIm5vU3RhY2tNb2JpbGUiOmZhbHNlfX1dLCJ2YWx1ZXMiOnsicG9wdXBQb3NpdGlvbiI6ImNlbnRlciIsInBvcHVwV2lkdGgiOiI2MDBweCIsInBvcHVwSGVpZ2h0IjoiYXV0byIsImJvcmRlclJhZGl1cyI6IjEwcHgiLCJjb250ZW50QWxpZ24iOiJjZW50ZXIiLCJjb250ZW50VmVydGljYWxBbGlnbiI6ImNlbnRlciIsImNvbnRlbnRXaWR0aCI6IjYwMHB4IiwiZm9udEZhbWlseSI6eyJsYWJlbCI6IkNhYmluIiwidmFsdWUiOiInQ2FiaW4nLHNhbnMtc2VyaWYiLCJ1cmwiOiJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Q2FiaW46NDAwLDcwMCIsImRlZmF1bHRGb250Ijp0cnVlfSwidGV4dENvbG9yIjoiIzAwMDAwMCIsInBvcHVwQmFja2dyb3VuZENvbG9yIjoiI0ZGRkZGRiIsInBvcHVwQmFja2dyb3VuZEltYWdlIjp7InVybCI6IiIsImZ1bGxXaWR0aCI6dHJ1ZSwicmVwZWF0IjpmYWxzZSwiY2VudGVyIjp0cnVlLCJjb3ZlciI6dHJ1ZX0sInBvcHVwT3ZlcmxheV9iYWNrZ3JvdW5kQ29sb3IiOiJyZ2JhKDAsIDAsIDAsIDAuMSkiLCJwb3B1cENsb3NlQnV0dG9uX3Bvc2l0aW9uIjoidG9wLXJpZ2h0IiwicG9wdXBDbG9zZUJ1dHRvbl9iYWNrZ3JvdW5kQ29sb3IiOiIjREREREREIiwicG9wdXBDbG9zZUJ1dHRvbl9pY29uQ29sb3IiOiIjMDAwMDAwIiwicG9wdXBDbG9zZUJ1dHRvbl9ib3JkZXJSYWRpdXMiOiIwcHgiLCJwb3B1cENsb3NlQnV0dG9uX21hcmdpbiI6IjBweCIsInBvcHVwQ2xvc2VCdXR0b25fYWN0aW9uIjp7Im5hbWUiOiJjbG9zZV9wb3B1cCIsImF0dHJzIjp7Im9uQ2xpY2siOiJkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcudS1wb3B1cC1jb250YWluZXInKS5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOyJ9fSwiYmFja2dyb3VuZENvbG9yIjoiI2Y5ZjlmOSIsImJhY2tncm91bmRJbWFnZSI6eyJ1cmwiOiIiLCJmdWxsV2lkdGgiOnRydWUsInJlcGVhdCI6ZmFsc2UsImNlbnRlciI6dHJ1ZSwiY292ZXIiOmZhbHNlfSwicHJlaGVhZGVyVGV4dCI6IiIsImxpbmtTdHlsZSI6eyJib2R5Ijp0cnVlLCJsaW5rQ29sb3IiOiIjMDAwMGVlIiwibGlua0hvdmVyQ29sb3IiOiIjMDAwMGVlIiwibGlua1VuZGVybGluZSI6dHJ1ZSwibGlua0hvdmVyVW5kZXJsaW5lIjp0cnVlfSwiX21ldGEiOnsiaHRtbElEIjoidV9ib2R5IiwiaHRtbENsYXNzTmFtZXMiOiJ1X2JvZHkifX19LCJzY2hlbWFWZXJzaW9uIjo5fQ==">
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+  <title></title>
+  
+    <style type="text/css">
+      @media only screen and (min-width: 620px) {
+  .u-row {
+    width: 600px !important;
+  }
+  .u-row .u-col {
+    vertical-align: top;
+  }
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+  .u-row .u-col-100 {
+    width: 600px !important;
+  }
 
-    <!-- CSS Reset : BEGIN -->
-    <style>
+}
 
-        /* What it does: Remove spaces around the email design added by some email clients. */
-        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-        html,
-body {
-    margin: 0 auto !important;
-    padding: 0 !important;
-    height: 100% !important;
+@media (max-width: 620px) {
+  .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .u-row .u-col {
+    min-width: 320px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  .u-row {
+    width: calc(100% - 40px) !important;
+  }
+  .u-col {
     width: 100% !important;
-    background: #f1f1f1;
+  }
+  .u-col > div {
+    margin: 0 auto;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* What it does: Stops email clients resizing small text. */
-* {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-/* What it does: Centers email on Android 4.4 */
-div[style*="margin: 16px 0"] {
-    margin: 0 !important;
-}
-
-/* What it does: Stops Outlook from adding extra spacing to tables. */
 table,
+tr,
 td {
-    mso-table-lspace: 0pt !important;
-    mso-table-rspace: 0pt !important;
+  vertical-align: top;
+  border-collapse: collapse;
 }
 
-/* What it does: Fixes webkit padding issue. */
-table {
-    border-spacing: 0 !important;
-    border-collapse: collapse !important;
-    table-layout: fixed !important;
-    margin: 0 auto !important;
+p {
+  margin: 0;
 }
 
-/* What it does: Uses a better rendering method when resizing images in IE. */
-img {
-    -ms-interpolation-mode:bicubic;
+.ie-container table,
+.mso-container table {
+  table-layout: fixed;
 }
 
-/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-a {
-    text-decoration: none;
+* {
+  line-height: inherit;
 }
 
-/* What it does: A work-around for email clients meddling in triggered links. */
-*[x-apple-data-detectors],  /* iOS */
-.unstyle-auto-detected-links *,
-.aBn {
-    border-bottom: 0 !important;
-    cursor: default !important;
-    color: inherit !important;
-    text-decoration: none !important;
-    font-size: inherit !important;
-    font-family: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
+a[x-apple-data-detectors='true'] {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
-/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-.a6S {
-    display: none !important;
-    opacity: 0.01 !important;
-}
-
-/* What it does: Prevents Gmail from changing the text color in conversation threads. */
-.im {
-    color: inherit !important;
-}
-
-/* If the above doesn't work, add a .g-img class to any image in question. */
-img.g-img + div {
-    display: none !important;
-}
-
-/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-/* Create one of these media queries for each additional viewport size you'd like to fix */
-
-/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
-@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-    u ~ div .email-container {
-        min-width: 320px !important;
-    }
-}
-/* iPhone 6, 6S, 7, 8, and X */
-@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-    u ~ div .email-container {
-        min-width: 375px !important;
-    }
-}
-/* iPhone 6+, 7+, and 8+ */
-@media only screen and (min-device-width: 414px) {
-    u ~ div .email-container {
-        min-width: 414px !important;
-    }
-}
-
-
+table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; }
     </style>
+  
+  
 
-    <!-- CSS Reset : END -->
-
-    <!-- Progressive Enhancements : BEGIN -->
-    <style>
-
-	    .primary{
-	background: #f5564e;
-}
-.bg_white{
-	background: #ffffff;
-}
-.bg_light{
-	background: #fafafa;
-}
-.bg_black{
-	background: #000000;
-}
-.bg_dark{
-	background: rgba(0,0,0,.8);
-}
-.email-section{
-	padding:2.5em;
-}
-
-/*BUTTON*/
-.btn{
-	padding: 5px 15px;
-	display: inline-block;
-}
-.btn.btn-primary{
-	border-radius: 5px;
-	background: #f5564e;
-	color: #ffffff;
-}
-.btn.btn-white{
-	border-radius: 5px;
-	background: #ffffff;
-	color: #000000;
-}
-.btn.btn-white-outline{
-	border-radius: 5px;
-	background: transparent;
-	border: 1px solid #fff;
-	color: #fff;
-}
-
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Nunito Sans', sans-serif;
-	color: #000000;
-	margin-top: 0;
-}
-
-body{
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.8;
-	color: rgba(0,0,0,.4);
-}
-
-a{
-	color: #f5564e;
-}
-
-table{
-}
-/*LOGO*/
-
-.logo h1{
-	margin: 0;
-}
-.logo h1 a{
-	color: #000;
-	font-size: 20px;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-family: 'Nunito Sans', sans-serif;
-}
-
-.navigation{
-	padding: 0;
-}
-.navigation li{
-	list-style: none;
-	display: inline-block;;
-	margin-left: 5px;
-	font-size: 12px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.navigation li a{
-	color: rgba(0,0,0,.6);
-}
-
-/*HERO*/
-.hero{
-	position: relative;
-	z-index: 0;
-}
-.hero .overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	content: '';
-	width: 100%;
-	background: #000000;
-	z-index: -1;
-	opacity: .3;
-}
-.hero .icon{
-}
-.hero .icon a{
-	display: block;
-	width: 60px;
-	margin: 0 auto;
-}
-.hero .text{
-	color: rgba(255,255,255,.8);
-	padding: 0 4em;
-}
-.hero .text h2{
-	color: #ffffff;
-	font-size: 40px;
-	margin-bottom: 0;
-	line-height: 1.2;
-	font-weight: 900;
-}
-
-
-/*HEADING SECTION*/
-.heading-section{
-}
-.heading-section h2{
-	color: #000000;
-	font-size: 24px;
-	margin-top: 0;
-	line-height: 1.4;
-	font-weight: 700;
-}
-.heading-section .subheading{
-	margin-bottom: 20px !important;
-	display: inline-block;
-	font-size: 13px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: rgba(0,0,0,.4);
-	position: relative;
-}
-.heading-section .subheading::after{
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -10px;
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: #f5564e;
-	margin: 0 auto;
-}
-
-.heading-section-white{
-	color: rgba(255,255,255,.8);
-}
-.heading-section-white h2{
-	font-family: 
-	line-height: 1;
-	padding-bottom: 0;
-}
-.heading-section-white h2{
-	color: #ffffff;
-}
-.heading-section-white .subheading{
-	margin-bottom: 0;
-	display: inline-block;
-	font-size: 13px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: rgba(255,255,255,.4);
-}
-
-
-.icon{
-	text-align: center;
-}
-.icon img{
-}
-
-
-/*SERVICES*/
-.services{
-	background: rgba(0,0,0,.03);
-}
-.text-services{
-	padding: 10px 10px 0; 
-	text-align: center;
-}
-.text-services h3{
-	font-size: 16px;
-	font-weight: 600;
-}
-
-.services-list{
-	padding: 0;
-	margin: 0 0 10px 0;
-	width: 100%;
-	float: left;
-}
-
-.services-list .text{
-	width: 100%;
-	float: right;
-}
-.services-list h3{
-	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 18px;
-}
-.services-list p{
-	margin: 0;
-}
-
-
-/*DESTINATION*/
-.text-tour{
-	padding-top: 10px;
-}
-.text-tour h3{
-	margin-bottom: 0;
-}
-.text-tour h3 a{
-	color: #000;
-}
-
-/*BLOG*/
-.text-services .meta{
-	text-transform: uppercase;
-	font-size: 14px;
-}
-
-/*TESTIMONY*/
-.text-testimony .name{
-	margin: 0;
-}
-.text-testimony .position{
-	color: rgba(0,0,0,.3);
-
-}
-
-
-/*COUNTER*/
-.counter{
-	width: 100%;
-	position: relative;
-	z-index: 0;
-}
-.counter .overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	content: '';
-	width: 100%;
-	background: #000000;
-	z-index: -1;
-	opacity: .3;
-}
-.counter-text{
-	text-align: center;
-}
-.counter-text .num{
-	display: block;
-	color: #ffffff;
-	font-size: 34px;
-	font-weight: 700;
-}
-.counter-text .name{
-	display: block;
-	color: rgba(255,255,255,.9);
-	font-size: 13px;
-}
-
-
-ul.social{
-	padding: 0;
-}
-ul.social li{
-	display: inline-block;
-}
-
-/*FOOTER*/
-
-.footer{
-	color: rgba(255,255,255,.5);
-
-}
-.footer .heading{
-	color: #ffffff;
-	font-size: 20px;
-}
-.footer ul{
-	margin: 0;
-	padding: 0;
-}
-.footer ul li{
-	list-style: none;
-	margin-bottom: 10px;
-}
-.footer ul li a{
-	color: rgba(255,255,255,1);
-}
-
-
-@media screen and (max-width: 500px) {
-
-	.icon{
-		text-align: left;
-	}
-
-	.text-services{
-		padding-left: 0;
-		padding-right: 20px;
-		text-align: left;
-	}
-
-}
-
-
-    </style>
-
+<!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet" type="text/css"><!--<![endif]-->
 
 </head>
 
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-	<center style="width: 100%; background-color: #f1f1f1;">
-    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+<body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #f9f9f9;color: #000000">
+  <!--[if IE]><div class="ie-container"><![endif]-->
+  <!--[if mso]><div class="mso-container"><![endif]-->
+  <table style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #f9f9f9;width:100%" cellpadding="0" cellspacing="0">
+  <tbody>
+  <tr style="vertical-align: top">
+    <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #f9f9f9;"><![endif]-->
+    
+
+<div class="u-row-container" style="padding: 0px;background-color: transparent">
+  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;">
+    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+      
+<!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+<div class="u-col u-col-100" style="max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top;">
+  <div style="height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+  
+<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Cabin',sans-serif;" align="left">
+        
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tbody><tr>
+    <td style="padding-right: 0px;padding-left: 0px;" align="center">
+      
+      <img align="center" border="0" src="https://www.killping.com/blog/wp-content/uploads/2015/05/ekko.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px;" width="600">
+      
+    </td>
+  </tr>
+</tbody></table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+  </div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
     </div>
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
-    	<!-- BEGIN BODY -->
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="top" class="bg_white" style="padding: 1em 2.5em;">
-          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-          		<tr>
-          			<td width="40%" class="logo" style="text-align: left;">
-			            <h1><a href="#">Travel</a></h1>
-			          </td>
-			          <td width="60%" class="logo" style="text-align: right;">
-			            <ul class="navigation">
-			            	<li><a href="#">Home</a></li>
-			            	<li><a href="#">About</a></li>
-			            	<li><a href="#">Works</a></li>
-			            	<li><a href="#">Blog</a></li>
-			            	<li><a href="#">Contact</a></li>
-			            </ul>
-			          </td>
-          		</tr>
-          	</table>
-          </td>
-	      </tr><!-- end tr -->
-				<tr>
-          <td valign="middle" class="hero bg_white" style="background-image: url(images/bg_1.jpg); background-size: cover; height: 400px;">
-          	<div class="overlay"></div>
-            <table>
-            	<tr>
-            		<td>
-            			<div class="text" style="text-align: center;">
-            				<h2>{{strNombre}} {{strPrimerApellido}} {{strSegundoApellido}} {{nmbEdad}} </h2>
-            			</div>
-            		</td>
-            	</tr>
-            </table>
-          </td>
-	      </tr><!-- end tr -->
-	      <tr>
-	        <td class="bg_dark email-section" style="text-align:center;">
-	        	<div class="heading-section heading-section-white">
-	          	<h2>Welcome To Travel Agency</h2>
-	          	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-	        	</div>
-	        </td>
-	      </tr><!-- end: tr -->
-	      <tr>
-		      <td class="bg_white">
-		        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-		        	<tr>
-					      <td class="bg_white">
-					        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-					          <tr>
-					            <td class="bg_white email-section">
-					            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-					              	<h2>Best Destination</h2>
-					              	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-					            	</div>
-					            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-					            		<tr>
-			                      <td valign="top" width="50%">
-			                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-right: 10px;">
-			                              <a href="#"><img src="images/destination-1.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-right: 10px;">
-			                              <a href="#"><img src="images/destination-2.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-right: 10px;">
-			                              <a href="#"><img src="images/destination-3.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-right: 10px;">
-			                              <a href="#"><img src="images/destination-4.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                        </table>
-			                      </td>
+  </div>
+</div>
 
 
 
-			                      <td valign="top" width="50%">
-			                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-left: 10px;">
-			                              <a href="#"><img src="images/destination-5.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-left: 10px;">
-			                              <a href="#"><img src="images/destination-6.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-left: 10px;">
-			                              <a href="#"><img src="images/destination-7.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                          <tr>
-			                            <td style="padding-top: 20px; padding-left: 10px;">
-			                              <a href="#"><img src="images/destination-8.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
-			                              <div class="text-tour" style="text-align: center;">
-			                              	<h3><a href="#">Gurtnellen, Swetzerland</a></h3>
-			                              	<span class="price">10 days tour</span>
-			                              </div>
-			                            </td>
-			                          </tr>
-			                        </table>
-			                      </td>
-			                    </tr>
-					            	</table>
-					            </td>
-					          </tr><!-- end: tr -->
+<div class="u-row-container" style="padding: 0px;background-color: transparent">
+  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;">
+    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+      
+<!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+<div class="u-col u-col-100" style="max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top;">
+  <div style="height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+  
+<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 33px 7px;font-family:'Cabin',sans-serif;" align="left">
+        
+  <div style="line-height: 160%; text-align: center; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 160%; text-align: left; margin: 0px;">&nbsp;</p>
+<p style="line-height: 160%; text-align: center; font-size: 14px; margin: 0px;"><span style="background-color: #ffffff; font-size: 22px; line-height: 35.2px; color: #236fa1; font-family: 'Playfair Display', serif;">Bienvenido a la grieta del invocador&nbsp;</span></p>
+  </div>
 
-					        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-					      </td>
-					    </tr><!-- end:tr -->
-		          <tr>
-			          <td valign="middle" class="counter" style="background-image: url(images/bg_1.jpg); background-size: cover; padding: 4em 0;">
-			          	<div class="overlay"></div>
-			            <table>
-			            	<tr>
-			            		<td valign="middle" width="33.333%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td class="counter-text">
-                            	<span class="num">200</span>
-                            	<span class="name">Amazing Deals</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td valign="middle" width="33.333%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td class="counter-text">
-                            	<span class="num">1200</span>
-                            	<span class="name">Sold Tours</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td valign="middle" width="33.333%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td class="counter-text">
-                            	<span class="num">1000</span>
-                            	<span class="name">Happy Traveler</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-			            	</tr>
-			            </table>
-			          </td>
-				      </tr><!-- end tr -->
-				      <tr>
-		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-		              	<h2>Our Blog</h2>
-		              	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-		            	</div>
-		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-		            		<tr>
-                      <td valign="top" width="50%" style="padding-top: 20px;">
-                        <table role="presentation" cellspacing="0" cellpadding="10" border="0" width="100%">
-                          <tr>
-                            <td>
-                              <img src="images/blog-1.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="text-services" style="text-align: left;">
-                            	<p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
-                            	<h3>Business Key to Success</h3>
-                             	<p>Far far away, behind the word mountains, far from the countries</p>
-                             	<p><a href="#" class="btn btn-primary">Read more</a></p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td valign="top" width="50%" style="padding-top: 20px;">
-                        <table role="presentation" cellspacing="0" cellpadding="10" border="0" width="100%">
-                          <tr>
-                            <td>
-                              <img src="images/blog-2.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="text-services" style="text-align: left;">
-                            	<p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
-                            	<h3>Web Design Technique</h3>
-                              <p>Far far away, behind the word mountains, far from the countries</p>
-                              <p><a href="#" class="btn btn-primary">Read more</a></p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-		            	</table>
-		            </td>
-		          </tr><!-- end: tr -->
-		          <tr>
-		            <td class="bg_light email-section">
-		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-		              	<h2>Happy Tourist</h2>
-		              	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-		            	</div>
-		            	<table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%">
-		            		<tr>
-                      <td valign="top" width="50%" style="padding-top: 20px;">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td>
-                              <img src="images/person_1.jpg" alt="" style="width: 100px; max-width: 600px; height: auto; margin-bottom: 20px; display: block; border-radius: 50%;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="text-testimony" style="">
-                            	<h3 class="name">Ronald Tuff</h3>
-                            	<span class="position">Businessman</span>
-                             	<p>Far far away, behind the word mountains, far from the countries</p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td valign="top" width="50%" style="padding-top: 20px;">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td>
-                              <img src="images/person_2.jpg" alt="" style="width: 100px; max-width: 600px; height: auto; margin-bottom: 20px; display: block; border-radius: 50%;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="text-testimony" style="">
-                            	<h3 class="name">Willam Clarson</h3>
-                            	<span class="position">Businessman</span>
-                              <p>Far far away, behind the word mountains, far from the countries</p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-		            	</table>
-		            </td>
-		          </tr><!-- end: tr -->
-		          <tr>
-		            <td class="bg_white email-section" style="width: 100%;">
-		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-		            		<tr>
-		            			<td valign="middle" width="50%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td>
-                              <img src="images/bg_2.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td valign="middle" width="50%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td class="text-services" style="text-align: left; padding-left:25px;">
-                            	<div class="heading-section">
-								              	<h2>Things to know before traveling</h2>
-								            	</div>
-								            	<div class="services-list">
-								            		<div class="text">
-								            			<h3>1. Pack up your things</h3>
-								            			<p>A small river named Duden flows by their place and supplies</p>
-								            		</div>
-								            	</div>
-								            	<div class="services-list">
-								            		<div class="text">
-								            			<h3>2. Search for Destination</h3>
-								            			<p>A small river named Duden flows by their place and supplies</p>
-								            		</div>
-								            	</div>
-								            	<div class="services-list">
-								            		<div class="text">
-								            			<h3>3. Be Responsible</h3>
-								            			<p>A small river named Duden flows by their place and supplies</p>
-								            		</div>
-								            	</div>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-		            	</table>
-		            </td>
-		          </tr><!-- end: tr -->
-		        </table>
+<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Cabin',sans-serif;" align="left">
+        
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tbody><tr>
+    <td style="padding-right: 0px; padding-left: 0px;" align="center">
+      <a href="https://www.youtube.com/watch?v=kmNui6kC1Lk" target="_blank">
+      <img align="center" border="0" src="https://assets.unlayer.com/projects/8345/1659730139298-video_youtube_kmNui6kC1Lk.jpg" alt="Video" title="Video" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 580px;" width="580" class="fullwidth">
+      </a>
+    </td>
+  </tr>
+</tbody></table>
 
-		      </td>
-		    </tr><!-- end:tr -->
-      <!-- 1 Column Text + Button : END -->
-      </table>
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="middle" class="bg_black footer email-section">
-            <table>
-            	<tr>
-                <td valign="top" width="60%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-right: 10px;">
-                      	<h3 class="heading">About</h3>
-                      	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                      	<ul class="social">
-                      		<li><img src="images/002-play-button.png" alt="" style="width: 30px; max-width: 600px; height: auto; display: block;"></li>
-                      		<li><img src="images/002-play-button.png" alt="" style="width: 30px; max-width: 600px; height: auto; display: block;"></li>
-                      		<li><img src="images/002-play-button.png" alt="" style="width: 30px; max-width: 600px; height: auto; display: block;"></li>
-                      	</ul>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td valign="top" width="40%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                      	<h3 class="heading">Contact Info</h3>
-                      	<ul>
-					                <li><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-					                <li><span class="text">+2 392 3929 210</span></a></li>
-					              </ul>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr><!-- end: tr -->
-        <tr>
-        	<td valign="middle" class="bg_black footer email-section">
-        		<table>
-            	<tr>
-                <td valign="top" width="33.333%">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-right: 10px;">
-                      	<p>&copy; 2018 Travel. All Rights Reserved</p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td valign="top" width="33.333%">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
-                      	<p><a href="#" style="color: rgba(255,255,255,.4);">Unsubcribe</a></p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-        	</td>
-        </tr>
-      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
+<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:33px 55px 60px;font-family:'Cabin',sans-serif;" align="left">
+        
+  <div style="line-height: 160%; text-align: center; word-wrap: break-word;">
+    <p style="line-height: 160%; font-size: 14px; margin: 0px;"><span style="font-size: 18px; line-height: 28.8px; font-family: 'Old Standard TT', serif;">{{strNombre}} {{strPrimerApellido}} {{strSegundoApellido}} {{nmbEdad}}<br></span></p>
+<p style="line-height: 160%; font-size: 14px; margin: 0px;"><span style="font-size: 18px; line-height: 28.8px; font-family: 'Old Standard TT', serif;"><br><br></span></p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+  </div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
     </div>
-  </center>
-</body>
-</html>
+  </div>
+</div>
+
+
+    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+    </td>
+  </tr>
+  </tbody>
+  </table>
+  <!--[if mso]></div><![endif]-->
+  <!--[if IE]></div><![endif]-->
+
+
+
+</body></html>

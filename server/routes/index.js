@@ -4,7 +4,7 @@ const usuario = require ("./usuario");
 const puesto = require ("./puesto");
 const empresa = require ("./empresa");
 
-app.use("/usuario", usuario);//http://localhost:3000/usuario
+app.use("/usuario", usuario);
 app.use("/empresa", empresa);
 app.use("/puesto", puesto);
 

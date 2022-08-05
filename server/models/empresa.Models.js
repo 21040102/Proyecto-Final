@@ -1,19 +1,16 @@
 const mongoose = require("mongoose");
-const mongooseHidden = require("mongoose-hidden")();
+const parseId= (id) => {return mongoose.Types.ObjectId(id)}
 
-const empresaSchema = mongoose.Schema({
-    nombre:{
+const CategoriasSchema = mongoose.Schema({
+    strNombre:{
         type:String,
         required: [true, "Es necesario ingresar tu Nombre"]
     },
-    RazonSocial:{
+    strRazonsocial:{
         type:String,
-        required: [true, "Es necesario ingresar tu Razon Socila"]
-    } 
+        required: [true, "Es necesario ingresar tu Razon social"]
+    }
 })
 
 
-empresaSchema.plugin(mongooseHidden, {hidden:{password:true, _id:false}});
-
-module.exports = mongoose.model("empresa", empresaSchema);
-
+module.exports = mongoose.model("empresa", CategoriasSchema);

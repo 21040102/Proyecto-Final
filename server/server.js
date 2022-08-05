@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 
 app.use("/api",routes);
 
+
+
+
 mongoose.connect(process.env.URLDB,{})
 .then(() => {
     console.log("[MONGOOB]".green + "DATABASE CONECTION SUCCESSFULLY");
