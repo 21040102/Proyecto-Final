@@ -5,6 +5,7 @@ require("colors");
 require("./config/config");
 const app = express();
 const routes  = require("./routes/index");
+const { response, request } = require("./routes/index");
 
 
 app.use(bodyParser.urlencoded({extended: true})); 
@@ -12,7 +13,12 @@ app.use(bodyParser.json());
  
 
 app.use("/api",routes);
-
+app.get("/",(request, response)=>{
+    return response.status(200).json({
+        msg : "Estas dentro de las api de samano guapo ",
+        status: 200
+    })
+})
 
 
 
